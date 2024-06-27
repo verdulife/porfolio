@@ -1,0 +1,20 @@
+<span
+  id="cursorBlur"
+  class="bg- fixed z-10 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full backdrop-blur [-webkit-mask:radial-gradient(circle,black,transparent_75%)] [animation:both]"
+></span>
+
+<script>
+  function init_cursor() {
+    window.addEventListener("mousemove", (ev) => {
+      const cursor = document.querySelector("#cursorBlur") as HTMLElement;
+      const { clientX, clientY } = ev;
+
+      cursor.animate([{ top: `${clientY}px`, left: `${clientX}px` }], {
+        duration: 1000,
+        easing: "ease-in-out",
+        fill: "both",
+      });
+    });
+  }
+  init_cursor();
+</script>

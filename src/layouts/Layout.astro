@@ -1,0 +1,34 @@
+---
+import "@fontsource/geist-sans";
+import Nav from "@/components/Nav.astro";
+import Cursor from "@/components/Cursor.astro";
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={Astro.props.description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{Astro.props.title}</title>
+  </head>
+  <body
+    class="scroll scroll-smooth text-pretty dark:bg-black dark:text-gray-200"
+  >
+    <Nav />
+    <div class="min-h-screen overflow-x-hidden">
+      <slot />
+    </div>
+
+    <Cursor />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    scrollbar-width: thin;
+    scrollbar-color: #181818 black;
+  }
+</style>
