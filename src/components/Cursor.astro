@@ -1,25 +1,20 @@
 <span
-  class="cursor-follow pointer-events-none fixed z-10 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full backdrop-brightness-200 [-webkit-mask:radial-gradient(circle,black,transparent_75%)]"
->
-</span>
-
-<span
-  class="cursor-follow pointer-events-none fixed -z-10 size-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full backdrop-brightness-[1000%] [-webkit-mask:radial-gradient(circle,black,transparent_50%)]"
+  class="cursor-follow pointer-events-none fixed z-10 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full backdrop-brightness-200 [mask-image:radial-gradient(circle,black,transparent_75%)]"
 >
 </span>
 
 <script>
   function init_cursor() {
     window.addEventListener("mousemove", (ev) => {
-      const cursors = document.querySelectorAll(".cursor-follow");
+      const cursor = document.querySelector(".cursor-follow");
       const { clientX, clientY } = ev;
 
-      cursors.forEach((cursor) => {
-        cursor.animate([{ top: `${clientY}px`, left: `${clientX}px` }], {
-          duration: 1000,
-          easing: "ease-in-out",
-          fill: "both",
-        });
+      if (!cursor) return;
+
+      cursor.animate([{ top: `${clientY}px`, left: `${clientX}px` }], {
+        duration: 1000,
+        easing: "ease-in-out",
+        fill: "both",
       });
     });
   }
