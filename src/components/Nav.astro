@@ -1,9 +1,13 @@
 ---
 import Logo from "@/lib/Logo.astro";
+import Button from "@/components/Button.astro";
 ---
 
-<header class="fixed left-0 top-0 z-50 flex w-full justify-center">
-  <nav class="flex w-full items-center justify-between p-4 p-8">
-    <Logo class="w-14" />
+<header class="fixed left-0 top-0 flex w-full justify-center">
+  <nav class="flex w-full items-center justify-between p-8">
+    <a href="/" class="relative z-20">
+      <Logo class="w-14" />
+    </a>
+    <Button href="mailto:verdu@live.com" bg="filled"> Contact me </Button>
   </nav>
 </header>

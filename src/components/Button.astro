@@ -1,0 +1,22 @@
+---
+interface Props {
+  href: string;
+  size?: "md" | "lg";
+  bg?: "clear" | "filled";
+}
+
+const { href, size = "md", bg = "clear" } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    "rounded-md border-stone-900 bg-stone-950 px-6 py-2 font-mono text-gray-400 transition-transform duration-300 hover:scale-105 hover:shadow-xl",
+    size === "md" && "text-base",
+    size === "lg" && "text-lg",
+    bg === "clear" && "bg-transparent",
+    bg === "filled" && "border bg-stone-900 backdrop-blur",
+  ]}
+>
+  <slot />
+</a>

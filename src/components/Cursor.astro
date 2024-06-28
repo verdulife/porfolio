@@ -1,18 +1,25 @@
 <span
-  id="cursorBlur"
-  class="bg- fixed z-10 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full backdrop-brightness-200 backdrop-blur-[1px] [-webkit-mask:radial-gradient(circle,black,transparent_75%)]"
-></span>
+  class="cursor-follow pointer-events-none fixed z-10 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full backdrop-brightness-200 [-webkit-mask:radial-gradient(circle,black,transparent_75%)]"
+>
+</span>
+
+<span
+  class="cursor-follow pointer-events-none fixed -z-10 size-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full backdrop-brightness-[1000%] [-webkit-mask:radial-gradient(circle,black,transparent_50%)]"
+>
+</span>
 
 <script>
   function init_cursor() {
     window.addEventListener("mousemove", (ev) => {
-      const cursor = document.querySelector("#cursorBlur") as HTMLElement;
+      const cursors = document.querySelectorAll(".cursor-follow");
       const { clientX, clientY } = ev;
 
-      cursor.animate([{ top: `${clientY}px`, left: `${clientX}px` }], {
-        duration: 1000,
-        easing: "ease-in-out",
-        fill: "both",
+      cursors.forEach((cursor) => {
+        cursor.animate([{ top: `${clientY}px`, left: `${clientX}px` }], {
+          duration: 1000,
+          easing: "ease-in-out",
+          fill: "both",
+        });
       });
     });
   }
