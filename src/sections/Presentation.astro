@@ -1,0 +1,27 @@
+<section class="flex min-h-screen">
+  <p class="slide-text text-6xl leading-tight">
+    <span>
+      I'm a graphic designer and frontend developer from Barcelona. With more
+      than 15 years of experience in the industry, I think design first its core
+      of all ui/ux development.
+    </span>
+  </p>
+</section>
+
+<style>
+  .slide-text span {
+    color: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(gray, gray) no-repeat;
+    background-clip: text;
+    background-size: 0% 100%;
+    animation: slideText linear both;
+    animation-timeline: view();
+    animation-range: 10% 70%;
+  }
+
+  @keyframes slideText {
+    100% {
+      background-size: 100% 100%;
+    }
+  }
+</style>

@@ -3,7 +3,6 @@ import "@fontsource/geist-sans";
 
 import Nav from "@/components/Nav.astro";
 import Cursor from "@/components/Cursor.astro";
-import Guide from "@/components/Guide.astro";
 import Background from "@/components/Background.astro";
 ---
 
@@ -18,15 +17,11 @@ import Background from "@/components/Background.astro";
     <title>{Astro.props.title}</title>
   </head>
   <body
-    class="scroll scroll-smooth text-pretty dark:bg-black dark:text-gray-500"
+    class="text-pretty dark:bg-black dark:text-gray-500"
   >
     <Nav />
-    <div class="min-h-screen overflow-x-hidden">
-      <slot />
-    </div>
-
+    <slot />
     <Cursor />
-    <Guide />
     <Background />
   </body>
 </html>
