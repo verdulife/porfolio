@@ -1,5 +1,18 @@
-<section class="flex min-h-screen flex-col items-start gap-8">
-  <h2 class="text-6xl md:text-7xl lg:text-9xl">
-    Here you can find my projects
-  </h2>
+---
+import ProjectCard from "@/components/ProjectCard.astro";
+import { projects } from "@/lib/Projects";
+---
+
+<section class="flex flex-col items-start pb-40 pt-56 gap-8">
+  <h2 class="text-6xl md:text-7xl lg:text-4xl">My projects</h2>
+
+  <ul class="grid grid-cols-1 md:grid-cols-2 row-span-1 gap-3">
+    {
+      projects.map((url) => (
+        <li class="row-span-1 col-span-1">
+          <ProjectCard url={url} />
+        </li>
+      ))
+    }
+  </ul>
 </section>
