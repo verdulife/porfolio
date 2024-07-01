@@ -16,11 +16,11 @@ import Background from "@/components/Background.astro";
     <meta name="generator" content={Astro.generator} />
     <title>{Astro.props.title}</title>
   </head>
-  <body
-    class="text-pretty dark:bg-black dark:text-gray-500"
-  >
+  <body class="text-pretty dark:bg-black dark:text-gray-500">
     <Nav />
-    <slot />
+    <div class="overflow-x-hidden px-4">
+      <slot />
+    </div>
     <Cursor />
     <Background />
   </body>
@@ -32,3 +32,6 @@ import Background from "@/components/Background.astro";
     scrollbar-color: #181818 black;
   }
 </style>
+
+<!-- <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js" is:inline
+></script> -->

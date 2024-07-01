@@ -1,43 +1,67 @@
 ---
-import type { Project } from "@/lib/types";
-import Image from "astro/components/Image.astro";
-import ogs from "open-graph-scraper";
+import Github from "@/lib/Github.astro";
+import Link from "@/lib/Link.astro";
 
-let data: Project;
-
-const { url } = Astro.props;
-const res = await ogs({ url });
-const { ogTitle, ogDescription, ogImage } = res.result;
-const [image] = ogImage || [];
-
-data = {
-  title: ogTitle || url,
-  description: ogDescription || "",
-  url,
-  image: image?.url.replace(".jpg", ".png"),
-};
+const { data } = Astro.props;
+const { url, title, description, image, technologies, github } = data;
 ---
 
 <article
-  class="flex h-full items-start gap-8 rounded-md border border-stone-900 bg-stone-950 p-8 shadow-xl shadow-black"
+  class="flex h-full flex-col items-start gap-8 rounded-md border border-stone-900 bg-stone-950 p-6 md:p-8 shadow-xl shadow-black md:flex-row"
 >
-  {
-    data.image && (
-      <Image
-        src={data.image}
-        alt={data.title}
-        width={128}
-        height={128}
-        class="relative z-20 rounded-lg shadow-xl"
-      />
-    )
-  }
+  <picture
+    class="flex size-9 items-center justify-center rounded-full border border-stone-900"
+  >
+    <object data={image} class="flex size-8 items-center justify-center p-1">
+      <img src="./globe.svg" alt="No image" class="size-8 p-1" />
+    </object>
+  </picture>
 
-  <div>
-    <h3 class="text-xl text-gray-200">{data.title}</h3>
-    <p>{data.description}</p>
-    <a href={url} target="_blank" rel="noopener noreferrer" class="text-sm">
-      <span class="text-stone-900">View project</span>
-    </a>
+  <div class="flex h-full flex-col justify-between">
+    <div>
+      <h3 class="text-lg text-gray-200 md:text-xl">
+        {title}
+      </h3>
+
+      <p class="text-sm md:text-base">{description}</p>
+    </div>
+
+    <div class="mt-4 flex items-center justify-between gap-1">
+      <ul class="flex gap-1">
+        {
+          technologies.map((tech: string) => (
+            <li class="inline-block rounded-md bg-stone-900 px-2 py-1 text-xs capitalize text-stone-200">
+              {tech}
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="flex items-center gap-1">
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-2 transition-transform hover:scale-110"
+        >
+          <Link class="size-5 text-gray-600" />
+          <span class="sr-only">View project</span>
+        </a>
+
+        {
+          github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="p-2 transition-transform hover:scale-110"
+            >
+              <Github class="size-5 text-gray-600" />
+              <span class="sr-only">Github</span>
+            </a>
+          )
+        }
+      </div>
+    </div>
   </div>
 </article>

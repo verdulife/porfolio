@@ -3,11 +3,11 @@ import Logo from "@/lib/Logo.astro";
 import Button from "@/components/Button.astro";
 ---
 
-<header class="fixed left-0 top-0 flex w-full justify-center">
+<header class="fixed left-0 top-0 flex w-full justify-center pointer-events-none">
   <nav class="flex w-full items-center justify-between p-8">
-    <a href="/" class="relative z-20">
-      <Logo class="w-14" />
+    <a href="/" class="relative z-20 pointer-events-auto">
+      <Logo class="w-10 md:w-14" />
     </a>
-    <Button href="mailto:verdu@live.com" bg="filled"> Contact me </Button>
+    <Button href="mailto:verdu@live.com" bg="filled" class="pointer-events-auto"> Contact me </Button>
   </nav>
 </header>

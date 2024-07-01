@@ -2,15 +2,15 @@
 import Button from "@/components/Button.astro";
 ---
 
-<section class="flex min-h-screen flex-col items-start justify-center gap-8">
-  <h1 class="text-6xl md:text-7xl lg:text-9xl">
+<section class="flex pt-48 md:pt-0 md:min-h-screen flex-col items-start justify-center gap-8">
+  <h1 class="text-4xl md:text-7xl lg:text-9xl">
     I'm verdu <span
-      class="relative z-20 mb-[-0.15cap] inline-flex h-[1.30cap] w-32 rounded-full border border-stone-900 bg-black bg-[url('/verdu.png')] bg-cover bg-[50%_20%] bg-no-repeat shadow-xl shadow-black md:w-48 lg:w-56"
-    ></span>, focused on design for the frontend
+      class="relative z-20 mb-[-0.15cap] inline-flex h-[1.30cap] w-24 md:w-32 rounded-full border border-stone-900 bg-black bg-[url('/verdu.png')] bg-cover bg-[50%_20%] bg-no-repeat shadow-xl shadow-black md:w-48 lg:w-56"
+    ></span>, <span class="text-stroke-2 text-stroke-gray-400 text-transparent">focused</span> on design for the frontend
   </h1>
 
   <div class="mg:px-8 flex flex-wrap gap-4">
-    <Button href="/" size="lg" bg="filled">↳ See projects</Button>
-    <Button href="/" size="lg">Visit LinkedIn</Button>
+    <Button href="/" size="lg" bg="filled">My projects</Button>
+    <Button href="/" size="lg">LinkedIn</Button>
   </div>
 </section>

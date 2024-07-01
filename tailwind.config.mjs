@@ -1,4 +1,5 @@
 import defaultTheme from "tailwindcss/defaultTheme";
+import textFillStroke from "tailwindcss-text-fill-stroke";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,5 +15,5 @@ export default {
 			}
 		},
 	},
-	plugins: [],
+	plugins: [textFillStroke()],
 }
