@@ -2,15 +2,24 @@
 import Button from "@/components/Button.astro";
 ---
 
-<section class="flex pt-48 md:pt-0 md:min-h-screen flex-col items-start justify-center gap-8">
+<section
+  class="flex flex-col items-start justify-center gap-8 pt-48 md:min-h-screen md:pt-0"
+>
   <h1 class="text-4xl md:text-7xl lg:text-9xl">
     I'm verdu <span
-      class="relative z-20 mb-[-0.15cap] inline-flex h-[1.30cap] w-24 md:w-32 rounded-full border border-stone-900 bg-black bg-[url('/verdu.png')] bg-cover bg-[50%_20%] bg-no-repeat shadow-xl shadow-black md:w-48 lg:w-56"
-    ></span>, <span class="text-stroke-2 text-stroke-gray-400 text-transparent">focused</span> on design for the frontend
+      class="relative z-20 mb-[-0.15cap] inline-flex h-[1.30cap] w-24 rounded-full border border-stone-900 bg-black bg-(image:--verdu-bg) bg-cover bg-[50%_20%] bg-no-repeat shadow-xl shadow-black md:w-48 lg:w-56"
+    ></span>, <span
+      class="text-transparent [-webkit-text-stroke:1px_var(--color-gray-500)] md:[-webkit-text-stroke:2px_var(--color-gray-500)]"
+      >focused</span
+    > on design for the frontend
   </h1>
 
   <div class="mg:px-8 flex flex-wrap gap-4">
-    <Button href="/" size="lg" bg="filled">My projects</Button>
-    <Button href="/" size="lg">LinkedIn</Button>
+    <Button href="#my-projects" size="lg" bg="filled">My projects</Button>
+    <Button
+      href="https://www.linkedin.com/in/albert-verdu/"
+      target="_blank"
+      size="lg">LinkedIn</Button
+    >
   </div>
 </section>

@@ -3,13 +3,16 @@ import ProjectCard from "@/components/ProjectCard.astro";
 import { projects } from "@/lib/Projects";
 ---
 
-<section class="flex flex-col items-start pb-40 pt-20 md:pt-56 gap-4 md:gap-8">
+<section
+  id="my-projects"
+  class="flex flex-col items-start gap-4 pt-20 pb-40 md:gap-8 md:pt-56"
+>
   <h2 class="text-xl md:text-7xl lg:text-4xl">My projects</h2>
 
-  <ul class="grid grid-cols-1 md:grid-cols-2 row-span-1 gap-3">
+  <ul class="row-span-1 grid grid-cols-1 gap-3 md:grid-cols-2">
     {
       projects.map((project) => (
-        <li class="row-span-1 col-span-1">
+        <li class="col-span-1 row-span-1">
           <ProjectCard data={project} />
         </li>
       ))
