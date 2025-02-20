@@ -1,101 +1,122 @@
+// ############### TODO: DIVIDE SIDE PROJECTS ###############
+
 export const projects = [
   {
-    url: "https://www.kncelados.com",
+    url: "https://www.kncelados.com/",
     title: "Kncelados Podcast",
-    description: "Pagina web oficial para el podcast de Kncelados. Uso de scrappers e inteligencia artificial para generar el contenido.",
-    image: "https://www.kncelados.com/favicon.svg",
-    card: "https://www.kncelados.com/card.jpg",
-    technologies: ["astro", "tailwind"],
-    github: "https://github.com/verdulife/kncelados-web",
+    image: "https://www.kncelados.com/card.jpg",
+    icon: "https://www.kncelados.com/favicon.svg",
+    technologies: ["astro.js", "tailwind"],
   },
+
   {
-    url: "https://www.calandraautomobili.com",
+    url: "https://www.calandraautomobili.com/",
     title: "Calandra Automovili",
-    description: "Pagina web de Calandra, una marca de automóviles de Barcelona.",
-    image: "https://www.calandraautomobili.com/favicon.svg",
-    technologies: ["astro", "tailwind"],
-    github: "https://github.com/verdulife/calandra-automobili",
+    icon: "https://www.calandraautomobili.com/favicon.png",
+    technologies: ["astro.js", "tailwind"],
   },
+
   {
-    url: "https://ulavet.netlify.app",
+    url: "https://www.ulavet.com/",
     title: "Ulavet Veterinaria",
-    description: "Pagina web de Ulavet, una veterinaria en Sant Pere de Ribes. Uso de scrappers para la galeria de instagran",
-    image: "https://ulavet.netlify.app/favicon.svg",
-    technologies: ["astro", "tailwind"],
-    github: "https://github.com/verdulife/ulavet",
+    image: "https://www.ulavet.com/card.jpg",
+    icon: "https://www.ulavet.com/favicon.svg",
+    technologies: ["astro.js", "tailwind"],
   },
+
   {
-    url: "https://www.jardinerialamediterrania.com",
+    url: "https://www.jardinerialamediterrania.com/",
     title: "Jardinería La Medeterránia",
-    description: "Pagina web de Jardinería La Medeterránea, una empresa de jardinería en Barcelona. Uso de scrappers para la galeria de instagran",
-    image: "https://www.jardinerialamediterrania.com/favicon.svg",
-    technologies: ["astro", "tailwind"],
-    github: "https://github.com/verdulife/jardinerialamediterrania",
+    image: "https://www.jardinerialamediterrania.com/card.jpg",
+    icon: "https://www.jardinerialamediterrania.com/favicon.svg",
+    technologies: ["astro.js", "tailwind"],
   },
+
   {
-    url: "https://testing.gaplogic.com",
+    url: "https://testing.gaplogic.com/",
     title: "Gaplogic",
-    description: "Pagina web de Gaplogic, una empresa de marketing digital en Sitges.",
-    image: "https://testing.gaplogic.com/favicon.svg",
+    icon: "https://testing.gaplogic.com/wp-content/uploads/favicon.svg",
     technologies: ["wordpress", "divi"],
-    github: null,
   },
+
   {
-    url: "https://gaudiobarcelona.com",
+    url: "https://www.gaudiobarcelona.com/",
     title: "Gaudio Art",
-    description: "Pagina web de Gaudio Barcelona, una empresa de regalos de arte para empresas en Barcelona.",
-    image: "https://gaudiobarcelona.com/favicon.svg",
+    icon: "https://www.gaudiobarcelona.com/wp-content/uploads/favicon.svg",
     technologies: ["wordpress", "divi"],
-    github: null,
   },
+
   {
-    url: "https://byebyedespedidas.com",
-    title: "Bye Bye Despedidas",
-    description: "Pagina web de Bye Bye Despedidas, una empresa de de actividades para despedidas de solteros en Barcelona.",
-    image: "https://byebyedespedidas.com/favicon.svg",
-    technologies: ["wordpress", "divi"],
-    github: null,
-  },
-  {
-    url: "https://stopperinternational.com",
+    url: "https://www.stopperinternational.com/",
     title: "Stopper Internacional",
-    description: "Pagina web de Stopper Internacional, una empresa de agentes de futbol en España.",
-    image: "https://stopperinternational.com/favicon.svg",
-    technologies: ["wordpress", "divi"],
-    github: null,
+    icon: "https://www.stopperinternational.com/wp-content/uploads/favicon.png",
+    technologies: ["wordpress", "divi", "atropos.js"],
   },
+
   {
-    url: "https://tattoo-killer.netlify.app",
+    url: "https://www.tattookiller.es/",
     title: "Tattoo Killer",
-    description: "Pagina web de Tattoo Killer, una empresa de eliminacion detatuajes en Cataluña.",
-    image: "https://tattoo-killer.netlify.app/favicon.svg",
-    technologies: ["astro", "tailwind"],
-    github: null,
+    image: "https://www.tattookiller.es/card.jpg",
+    icon: "https://www.tattookiller.es/favicon.svg",
+    technologies: ["astro.js", "tailwind"],
   },
-  {
-    url: "https://www.reggimarengo.com",
-    title: "Reggi Marengo",
-    description: "Pagina web de Reggi Marengo, una inmobiliaria en Barcelona.",
-    image: "https://www.reggimarengo.com/favicon.svg",
-    technologies: ["astro", "tailwind"],
-    github: null,
-  },
+
   {
     url: "https://menuplis.netlify.app",
     title: "Menuplis",
-    description: "Pagina web de Menuplis, web app para la gestión de menús y cartas de restaurantes. Creacion de pagina web, CRM para restaurantes y web app para usuario final.",
-    image: "https://menuplis.netlify.app/favicon.svg",
-    technologies: ["angular", "scss", "firebase"],
-    github: "https://github.com/verdulife/menuplis",
+    icon: "https://menuplis.netlify.app/assets/img/favicon.png",
+    technologies: ["angular.js", "scss", "firebase"],
   },
-  /* "https://www.sitgesgi.com",
-  "https://facturasgratis-v2.vercel.app",
-  "https://timer-app-seven.vercel.app",
-  "https://venarima.vercel.app",
-  "https://www.grandefronteo.com",
+
+  {
+    url: "https://www.sitgesgi.com",
+    title: "Sitgesgi",
+    image: "https://www.sitgesgi.com/logo-blue.svg",
+    icon: "https://www.sitgesgi.com/favicon.svg",
+    technologies: ["astro.js", "netlify CMS"],
+  },
+
+  {
+    url: "https://facturasgratis.vercel.app",
+    title: "Facturas Gratis",
+    image: "https://facturasgratis.vercel.app/logo-512.png",
+    icon: "https://facturasgratis.vercel.app/favicon.png",
+    technologies: ["svelte.js", "tailwind"],
+  },
+
+  {
+    url: "https://timer-app-seven.vercel.app",
+    title: "Timer App Seven",
+    image: "https://timer-app-seven.vercel.app/logo-512.png",
+    icon: "https://timer-app-seven.vercel.app/favicon.png",
+    technologies: ["svelte.js", "tailwind"],
+  },
+
+  {
+    url: "https://venarima.vercel.app",
+    title: "Venarima",
+    image: "https://venarima.vercel.app/assets/img/venarima.svg",
+    icon: "https://venarima.vercel.app/assets/img/favicon.png",
+    technologies: ["angular.js"],
+  },
+
+  {
+    url: "https://www.grandefronteo.com",
+    title: "Grande Fronteo",
+    image: "https://www.grandefronteo.com/logo.svg",
+    icon: "https://www.grandefronteo.com/favicon.svg",
+    technologies: ["svelte.js"],
+  },
+  /*
   "https://gimg-verdulife.vercel.app",
   "https://www.simplementewear.com",
   "https://onedaydesign.vercel.app",
   "https://bleed-two.vercel.app",
-  "https://wwwrap.dev", */
+  "https://wwwrap.dev",
+  "https://www.sglvilanova.com",
+  "https://www.seastone.es",
+  "https://www.mdisitges.com",
+  "https://www.supercleanvilanova.com",
+  "https://www.sitgesgi.com",
+  // */
 ]

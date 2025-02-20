@@ -1,67 +1,52 @@
 ---
-import Github from "@/lib/Github.astro";
-import Link from "@/lib/Link.astro";
-
 const { data } = Astro.props;
-const { url, title, description, image, technologies, github } = data;
+const { url, title, image, icon, technologies } = data;
 ---
 
-<article
-  class="flex h-full flex-col items-start gap-8 rounded-md border border-stone-900 bg-stone-950 p-6 md:p-8 shadow-xl shadow-black md:flex-row"
->
-  <picture
-    class="flex size-9 items-center justify-center rounded-full border border-stone-900"
+<a href={url} target="_blank" class="w-full transition-all">
+  <article
+    class="relative flex size-full min-h-[200px] flex-col items-start justify-end gap-8 overflow-clip rounded-md border border-stone-900 bg-stone-950 p-6 pr-12 shadow-xl shadow-black duration-300 hover:z-10 hover:scale-105 odd:hover:-rotate-1 even:hover:rotate-1"
   >
-    <object data={image} class="flex size-8 items-center justify-center p-1">
-      <img src="./globe.svg" alt="No image" class="size-8 p-1" />
-    </object>
-  </picture>
+    {
+      image && (
+        <img
+          loading="lazy"
+          decoding="async"
+          src={image}
+          alt={`${title} - Logotype`}
+          class="card absolute inset-0 size-full object-cover"
+        />
+      )
+    }
 
-  <div class="flex h-full flex-col justify-between">
-    <div>
-      <h3 class="text-lg text-gray-200 md:text-xl">
+    <figure
+      class="absolute top-6 right-6 size-8 bg-neutral-900/70 backdrop-blur border border-neutral-900 p-1 rounded-full"
+    >
+      <img src={icon} alt={`${title} - Favicon`} class="size-full object-contain" />
+    </figure>
+
+    <header class="z-10 flex max-w-3/4 items-center gap-2">
+      <h3 class="text-4xl">
         {title}
       </h3>
+    </header>
 
-      <p class="text-sm md:text-base">{description}</p>
-    </div>
-
-    <div class="mt-4 flex items-center justify-between gap-1">
+    <footer class="z-10 mt-4 flex w-full items-center gap-1">
       <ul class="flex gap-1">
         {
           technologies.map((tech: string) => (
-            <li class="inline-block rounded-md bg-stone-900 px-2 py-1 text-xs capitalize text-stone-200">
+            <li class="inline-block rounded-md bg-neutral-900 px-2 py-1 text-xs capitalize">
               {tech}
             </li>
           ))
         }
       </ul>
+    </footer>
+  </article>
+</a>
 
-      <div class="flex items-center gap-1">
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="p-2 transition-transform hover:scale-110"
-        >
-          <Link class="size-5 text-gray-600" />
-          <span class="sr-only">View project</span>
-        </a>
-
-        {
-          github && (
-            <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="p-2 transition-transform hover:scale-110"
-            >
-              <Github class="size-5 text-gray-600" />
-              <span class="sr-only">Github</span>
-            </a>
-          )
-        }
-      </div>
-    </div>
-  </div>
-</article>
+<style>
+  img.card {
+    mask: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+  }
+</style>
