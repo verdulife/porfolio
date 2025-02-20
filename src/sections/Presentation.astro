@@ -23,9 +23,9 @@
   const target = document.querySelector("#presentation") as HTMLElement;
   const animation = animate(
     ".slide-text span",
-    { backgroundSize: ["100% 100%", "0% 100%"] },
+    { backgroundSize: ["0% 100%", "100% 100%"] },
     { ease: "linear" }
   );
 
-  scroll(animation, { target, offset: [0.5, 1] });
+  scroll(animation, { target, offset: [1.4, 0.4] });
 </script>
