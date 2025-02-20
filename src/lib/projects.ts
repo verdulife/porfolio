@@ -4,6 +4,7 @@ export const projects = [
     title: "Kncelados Podcast",
     description: "Pagina web oficial para el podcast de Kncelados. Uso de scrappers e inteligencia artificial para generar el contenido.",
     image: "https://www.kncelados.com/favicon.svg",
+    card: "https://www.kncelados.com/card.jpg",
     technologies: ["astro", "tailwind"],
     github: "https://github.com/verdulife/kncelados-web",
   },
