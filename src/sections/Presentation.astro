@@ -1,4 +1,4 @@
-<section class="flex pt-16 md:pt-10">
+<section id="presentation" class="flex pt-16 md:pt-10">
   <p class="slide-text text-2xl leading-tight md:text-6xl">
     <span>
       I'm a graphic designer and frontend developer from Barcelona. With more
@@ -13,15 +13,19 @@
     color: rgba(255, 255, 255, 0.1);
     background: linear-gradient(gray, gray) no-repeat;
     background-clip: text;
-    background-size: 0% 100%;
-    animation: slideText linear both;
-    animation-timeline: view();
-    animation-range: 10% 70%;
-  }
-
-  @keyframes slideText {
-    100% {
-      background-size: 100% 100%;
-    }
   }
 </style>
+
+<script>
+  import { scroll } from "motion";
+  import { animate } from "motion/mini";
+
+  const target = document.querySelector("#presentation") as HTMLElement;
+  const animation = animate(
+    ".slide-text span",
+    { backgroundSize: ["100% 100%", "0% 100%"] },
+    { ease: "linear" }
+  );
+
+  scroll(animation, { target });
+</script>
