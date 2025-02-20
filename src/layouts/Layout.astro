@@ -2,7 +2,7 @@
 import "@fontsource/geist-sans";
 import "@/styles/global.css";
 
-import Nav from "@/components/Nav.astro";
+import Header from "@/components/Header.astro";
 import Cursor from "@/components/Cursor.astro";
 import Background from "@/components/Background.astro";
 ---
@@ -17,9 +17,9 @@ import Background from "@/components/Background.astro";
     <meta name="generator" content={Astro.generator} />
     <title>{Astro.props.title}</title>
   </head>
-  <body class="text-pretty dark:bg-black dark:text-gray-500">
-    <Nav />
-    <div class="overflow-x-hidden px-4">
+  <body class="bg-black text-gray-500">
+    <Header />
+    <div class="overflow-x-hidden px-2">
       <slot />
     </div>
     <Cursor />
