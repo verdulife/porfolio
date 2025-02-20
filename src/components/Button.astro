@@ -14,7 +14,7 @@ const { href, target, size = "md", bg = "clear" } = Astro.props;
   href={href}
   target={target}
   class:list={[
-    "px-6 py-2 font-mono text-gray-400 transition-transform duration-300 hover:scale-105",
+    "px-6 py-2 font-mono transition-all duration-300 hover:scale-105",
     size === "md" && "text-sm md:text-base",
     size === "lg" && "text-sm md:text-lg",
     bg === "clear" && "bg-transparent",
