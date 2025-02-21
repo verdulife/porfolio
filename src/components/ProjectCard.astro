@@ -8,7 +8,7 @@ const id = title.replaceAll(" ", "-").toLowerCase();
 <a href={url} target="_blank" class="w-full transition-all">
   <article
     id={id}
-    class="relative mb-2 flex w-full flex-col items-start justify-between gap-2 overflow-clip rounded-md border border-stone-900 bg-stone-950 p-4 pr-12 shadow-xl shadow-black duration-300 hover:z-30 hover:scale-105 odd:hover:-rotate-1 even:hover:rotate-1 md:mb-0 md:min-h-[200px] md:min-w-64 md:gap-8 md:p-6 hover:[&>*:not(.screenshot)]:opacity-0"
+    class="relative mb-2 flex min-h-[200px] w-full flex-col items-start gap-2 overflow-clip rounded-md border border-stone-900 bg-stone-950 p-4 pr-12 shadow-xl shadow-black duration-300 hover:z-30 hover:scale-105 odd:hover:-rotate-1 even:hover:rotate-1 md:mb-0 md:min-w-64 md:justify-between md:gap-8 md:p-6"
   >
     <figure
       class="top-6 right-6 size-8 rounded-full border border-neutral-900 bg-neutral-900/70 p-1 backdrop-blur md:absolute"
@@ -21,12 +21,12 @@ const id = title.replaceAll(" ", "-").toLowerCase();
     </figure>
 
     <header class="z-10 flex items-center gap-2 md:max-w-3/4">
-      <h3 class="text-lg md:text-3xl">
+      <h3 class="text-2xl md:text-3xl">
         {title}
       </h3>
     </header>
 
-    <footer class="z-10 mt-4 flex w-full items-center gap-1">
+    <footer class="z-10 mt-auto flex w-full items-center gap-1 md:mt-4">
       <ul class="flex flex-wrap gap-1">
         {
           technologies.map((tech: string) => (
@@ -47,6 +47,7 @@ const id = title.replaceAll(" ", "-").toLowerCase();
     width: 100%;
     height: 100%;
     display: flex;
+    background-position-x: center;
     background-position-y: 0%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -77,18 +78,39 @@ const id = title.replaceAll(" ", "-").toLowerCase();
 
 <script define:vars={{ id }} is:inline>
   cards[`card-${id}`] = document.querySelector(`#${id}`);
+  const notScreenshot = cards[`card-${id}`].querySelectorAll(
+    "&>*:not(.screenshot)"
+  );
 
-  cards[`card-${id}`].addEventListener("mouseenter", () => {
+  function showScreenshot() {
     const screenshot = document.createElement("div");
 
+    notScreenshot.forEach((element) => (element.style.opacity = "0"));
     screenshot.classList.add("screenshot");
     screenshot.style.backgroundImage = `url('screenshots/${id}.jpg')`;
 
     cards[`card-${id}`].appendChild(screenshot);
-  });
+  }
 
-  cards[`card-${id}`].addEventListener("mouseleave", () => {
+  function hideScreenshot() {
     const screenshot = cards[`card-${id}`].querySelector(".screenshot");
+
+    notScreenshot.forEach((element) => (element.style.opacity = "1"));
     cards[`card-${id}`].removeChild(screenshot);
+  }
+
+  cards[`card-${id}`].addEventListener("mouseenter", showScreenshot);
+  cards[`card-${id}`].addEventListener("mouseleave", hideScreenshot);
+
+  cards[`card-${id}`].addEventListener("touchstart", () => {
+    const screenshots = document.querySelectorAll(".screenshot");
+    const allNotScreenshots = document.querySelectorAll(
+      "#my-projects article>*"
+    );
+
+    allNotScreenshots.forEach((element) => (element.style.opacity = "1"));
+    screenshots.forEach((screenshot) => screenshot.remove());
+
+    showScreenshot();
   });
 </script>

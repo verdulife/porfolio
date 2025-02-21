@@ -9,6 +9,20 @@ export const projects: Project[] = [
   },
 
   {
+    url: "https://carnaval-sitges-2025.vercel.app",
+    title: "Carnaval Sitges 2025 App",
+    icon: "https://carnaval-sitges-2025.vercel.app/favicon.svg",
+    technologies: [Technology.astro, Technology.tailwind],
+  },
+
+  {
+    url: "https://www.jardinerialamediterrania.com/",
+    title: "Jardinería La Medeterránia",
+    icon: "https://www.jardinerialamediterrania.com/favicon.svg",
+    technologies: [Technology.astro, Technology.tailwind, "Playwright"],
+  },
+
+  {
     url: "https://www.calandraautomobili.com/",
     title: "Calandra Automovili",
     icon: "https://www.calandraautomobili.com/favicon.png",
@@ -19,13 +33,6 @@ export const projects: Project[] = [
     url: "https://www.ulavet.com/",
     title: "Ulavet Veterinaria",
     icon: "https://www.ulavet.com/favicon.svg",
-    technologies: [Technology.astro, Technology.tailwind, "Playwright"],
-  },
-
-  {
-    url: "https://www.jardinerialamediterrania.com/",
-    title: "Jardinería La Medeterránia",
-    icon: "https://www.jardinerialamediterrania.com/favicon.svg",
     technologies: [Technology.astro, Technology.tailwind, "Playwright"],
   },
 
@@ -113,16 +120,39 @@ export const projects: Project[] = [
     technologies: [Technology.svelte, Technology.tailwind, "PDFlib.js"],
   },
 
-  /*
-  "https://gimg-verdulife.vercel.app",
-  "https://www.simplementewear.com",
-  "https://onedaydesign.vercel.app",
-  "https://bleed-two.vercel.app",
-  "https://wwwrap.dev",
-  "https://www.sglvilanova.com",
-  "https://www.seastone.es",
-  "https://www.mdisitges.com",
-  "https://www.supercleanvilanova.com",
-  "https://www.sitgesgi.com",
-  // */
+  {
+    url: "https://onedaydesign.vercel.app",
+    title: "One Day Design",
+    icon: "https://onedaydesign.vercel.app/favicon.svg",
+    technologies: [Technology.svelte],
+  },
+
+  {
+    url: "https://www.sglvilanova.com",
+    title: "SGL Vilanova",
+    icon: "https://www.sglvilanova.com/favicon.svg",
+    technologies: [Technology.astro, Technology.tailwind],
+  },
+
+  {
+    url: "https://www.seastone.es/",
+    title: "Seastone",
+    icon: "https://www.seastone.es/wp-content/uploads/2025/02/favicon.svg",
+    technologies: [Technology.wordpress, Technology.elementor],
+  },
+
+  {
+    url: "https://mdisitges.com/",
+    title: "MDI Sitges",
+    icon: "https://mdisitges.com/wp-content/uploads/2024/11/favicon.svg",
+    technologies: [Technology.wordpress, Technology.elementor],
+  },
+
+  {
+    url: "https://www.supercleanvilanova.com/",
+    title: "Super Clean Vilanova",
+    icon: "https://www.supercleanvilanova.com/wp-content/uploads/assets/favicon.svg",
+    technologies: [Technology.wordpress, Technology.breakdance],
+  },
+
 ]

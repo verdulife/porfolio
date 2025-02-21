@@ -1,14 +1,13 @@
 import { chromium } from "playwright";
-import { projects } from "./projects.ts";
+import { projects } from "./projects.js";
 
-async function getScreenshots({ url, title }: any) {
+async function getScreenshots({ url, title }) {
   const id = title.replaceAll(" ", "-").toLowerCase();
   const browser = await chromium.launch();
   const page = await browser.newPage();
 
   await page.goto(url);
-  await page.waitForLoadState('domcontentloaded');
-  await page.screenshot({ path: `public/screenshots/${id}.jpg`, fullPage: true });
+  await page.locator("body").screenshot({ path: `public/screenshots/${id}.jpg` });
   await browser.close();
 }
 
