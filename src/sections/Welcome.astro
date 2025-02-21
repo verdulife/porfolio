@@ -2,12 +2,10 @@
 import Button from "@/components/Button.astro";
 ---
 
-<section
-  class="flex flex-col items-start gap-8 pt-36 pb-24 lg:py-56 xl:py-64" 
->
-  <h1 class="text-7xl lg:text-8xl xl:text-9xl leading-[0.9] md:leading-none"> 
+<section class="flex flex-col items-start gap-8 pt-40 pb-16 lg:py-56 xl:py-64">
+  <h1 class="text-7xl leading-[0.9] md:leading-none lg:text-8xl xl:text-9xl">
     I'm verdu <span
-      class="relative z-20 mb-[-0.15cap] inline-flex h-[1.20cap] aspect-[1.75] rounded-full border border-stone-900 bg-black bg-(image:--verdu-bg) bg-cover bg-[50%_20%] bg-no-repeat shadow-xl shadow-black"
+      class="relative z-20 mb-[-0.15cap] inline-flex aspect-[1.75] h-[1.20cap] rounded-full border border-stone-900 bg-black bg-(image:--verdu-bg) bg-cover bg-[50%_20%] bg-no-repeat shadow-xl shadow-black"
     ></span>, <span
       class="text-transparent [-webkit-text-stroke:1px_var(--color-neutral-300)] md:[-webkit-text-stroke:1.5px_var(--color-neutral-300)]"
       >focused</span
@@ -15,11 +13,9 @@ import Button from "@/components/Button.astro";
   </h1>
 
   <div class="mg:px-8 flex flex-wrap gap-4">
-    <Button href="#my-projects" size="lg" bg="filled">Watch projects</Button>
-    <Button
-      href="https://www.linkedin.com/in/albert-verdu/"
-      target="_blank"
-      size="lg">LinkedIn</Button
+    <Button href="#my-projects" bg="filled">Watch projects</Button>
+    <Button href="https://www.linkedin.com/in/albert-verdu/" target="_blank"
+      >LinkedIn</Button
     >
   </div>
 </section>

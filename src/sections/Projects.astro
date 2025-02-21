@@ -8,15 +8,15 @@ import { projects } from "@/lib/projects";
   class="flex w-full flex-col items-start pt-20 pb-40 md:pt-56"
 >
   <h2
-    class="-mb-[0.25cap] bg-gradient-to-b from-neutral-300 from-50% to-black to-85% bg-clip-text pl-4 text-6xl text-transparent md:text-8xl"
+    class="-mb-[0.25cap] bg-gradient-to-b from-neutral-300 from-50% to-black to-85% bg-clip-text pl-4 text-5xl text-transparent md:text-8xl"
   >
     Projects
   </h2>
 
-  <ul class="flex w-full flex-wrap gap-3">
+  <ul class="inline columns-2 md:flex w-full md:flex-wrap gap-2 md:gap-3">
     {
       projects.map((project) => (
-        <li class="grow odd:[&_article]:hover:-rotate-1 even:[&_article]:hover:rotate-1">
+        <li class="grow odd:[&_article]:hover:-rotate-1 even:[&_article]:hover:rotate-1 break-inside-avoid">
           <ProjectCard data={project} />
         </li>
       ))
