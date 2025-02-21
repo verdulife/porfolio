@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "scrape": "node scrape/getVideo.ts",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
@@ -21,6 +22,7 @@
     "typescript": "^5.5.2"
   },
   "devDependencies": {
+    "playwright": "^1.50.1",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0",
     "prettier-plugin-tailwindcss": "^0.6.5"
